@@ -10,9 +10,11 @@
     "test:all": "vitest",
     "test:accessibility": "vitest accessibility --run",
     "coverage": "vitest --coverage --run",
-    "test": "echo \"Navigate into an example and run the tests from there!\" && exit 1",
+    "test": "vitest",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format:check": "prettier . --check --ignore-path .gitignore",
+    "format:fix": "prettier . --write --ignore-path .gitignore"
   },
   "keywords": [
     "react",
@@ -64,7 +66,7 @@
     "jsdom": "^21.1.1",
     "lint-staged": "^13.2.0",
     "postcss": "^8.4.21",
-    "prettier": "^2.8.4",
+    "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.2.4",
     "svelte-preprocess": "^5.0.3",
     "tailwindcss": "^3.2.7",
