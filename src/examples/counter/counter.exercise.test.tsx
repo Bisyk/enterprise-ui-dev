@@ -31,17 +31,14 @@ test('it should render the component with an initial count', () => {
   expect(currentCount).toHaveTextContent(initialCount + '');
 });
 
-test(
-  'it should reset the count when the "Reset" button is pressed',
-  async () => {
-    const initialCount = 8;
-    const { user } = render(<Counter initialCount={initialCount} />);
+test('it should reset the count when the "Reset" button is pressed', async () => {
+  const initialCount = 8;
+  const { user } = render(<Counter initialCount={initialCount} />);
 
-    const currentCount = screen.getByTestId('current-count');
-    const resetButton = screen.getByTestId('reset-count');
+  const currentCount = screen.getByTestId('current-count');
+  const resetButton = screen.getByTestId('reset-count');
 
-    await user.click(resetButton);
+  await user.click(resetButton);
 
-    expect(currentCount).toHaveTextContent('0');
-  },
-);
+  expect(currentCount).toHaveTextContent('0');
+});
