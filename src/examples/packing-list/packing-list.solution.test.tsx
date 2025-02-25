@@ -68,3 +68,4 @@ it('removes an item when the remove button is clicked', async () => {
 
   expect(item).not.toBeInTheDocument();
 });
+
