@@ -17,7 +17,12 @@ const Counter = ({ initialCount = 0 }: CounterProps) => {
         {count}
       </div>
       <div className="flex justify-center gap-4">
-        <button className="btn-danger" name="reset" onClick={() => setCount(0)}>
+        <button
+          className="btn-danger"
+          name="reset"
+          data-testid="reset-count"
+          onClick={() => setCount(0)}
+        >
           Reset
         </button>
         <button
